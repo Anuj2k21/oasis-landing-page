@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Traveller - B2B Travel Solutions Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <!-- Realistic Clouds -->
+        <div class="cloud cloud-1">
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+        </div>
+        <div class="cloud cloud-2">
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+        </div>
+        <div class="cloud cloud-3">
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+        </div>
+        <div class="cloud cloud-4">
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+        </div>
+        <div class="cloud cloud-5">
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+            <div class="cloud-part"></div>
+        </div>
+        
+        <!-- Stars -->
+        <div class="stars-container"></div>
+    </div>
+
+    <!-- Particles -->
+    <div id="particles"></div>
+
+    <div class="container">
+        <!-- Header/Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Oasis Traveller DMC</span>
+                </div>
+                <p class="tagline">Your B2B Travel Partner</p>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="construction-badge">
+                    <i class="fas fa-tools"></i>
+                    <span>Under Construction</span>
+                </div>
+                <h1 class="main-title">
+                    <span class="title-line">Crafting Your</span>
+                    <span class="title-line highlight">Ultimate B2B Travel Platform</span>
+                </h1>
+                <p class="subtitle">Connecting travel businesses worldwide with seamless booking solutions</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                        <h3>Flight Bookings</h3>
+                        <p>Global inventory access</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3>Hotel Reservations</h3>
+                        <p>Worldwide properties</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h3>Transport Services</h3>
+                        <p>Complete mobility solutions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3>Holiday Packages</h3>
+                        <p>Curated experiences</p>
+                    </div>
+                </div>
+
+                <div class="countdown-section">
+                    <h3>Launching Soon</h3>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contact-form-section">
+                <div class="form-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h2>Get Early Access</h2>
+                    <p>Be the first to know when we launch. Contact us for partnership opportunities!</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" id="company" name="company" placeholder="Company Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Business Email" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your business needs..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-wave">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+                </svg>
+            </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Office</h3>
+                    <p>633, 029, behind Govind Plaza,<br>
+                    Gulzar Colony, Hasangarden Colony,<br>
+                    Kamta, Lucknow,<br>
+                    Uttar Pradesh 226028, India</p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-phone-alt"></i> Contact Us</h3>
+                    <p><a href="tel:+919763764444"><i class="fas fa-phone"></i> +91 97637 64444</a></p>
+                    <p><a href="mailto:b2b@oasistraveller.com"><i class="fas fa-envelope"></i> b2b@oasistraveller.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                    <p>Monday - Saturday<br>9:00 AM - 6:00 PM IST</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Oasis Traveller. All rights reserved. | B2B Travel Solutions</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
