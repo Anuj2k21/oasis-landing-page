@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Decorative Rockets -->
+    <div class="rocket-container rocket-left">
+        <svg class="rocket-svg" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Rocket Body -->
+            <defs>
+                <linearGradient id="rocketGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#90caf9;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#42a5f5;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#81d4fa;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Main Body -->
+            <rect x="35" y="50" width="30" height="60" fill="url(#rocketGradient)" rx="5"/>
+            
+            <!-- Nose Cone -->
+            <path d="M 35 50 L 50 20 L 65 50 Z" fill="#ef5350"/>
+            
+            <!-- Window -->
+            <circle cx="50" cy="70" r="8" fill="url(#windowGradient)" stroke="#01579b" stroke-width="2"/>
+            
+            <!-- Left Fin -->
+            <path d="M 35 100 L 20 120 L 35 110 Z" fill="#ff7043"/>
+            
+            <!-- Right Fin -->
+            <path d="M 65 100 L 80 120 L 65 110 Z" fill="#ff7043"/>
+            
+            <!-- Flame -->
+            <g class="flame-group">
+                <ellipse cx="50" cy="115" rx="8" ry="15" fill="#ffeb3b" opacity="0.9"/>
+                <ellipse cx="50" cy="120" rx="6" ry="12" fill="#ff9800" opacity="0.8"/>
+                <ellipse cx="50" cy="125" rx="4" ry="8" fill="#ff5722" opacity="0.7"/>
+            </g>
+        </svg>
+    </div>
+    
+    <div class="rocket-container rocket-right">
+        <svg class="rocket-svg" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Rocket Body -->
+            <defs>
+                <linearGradient id="rocketGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#e3f2fd;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#90caf9;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#42a5f5;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="windowGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#81d4fa;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Main Body -->
+            <rect x="35" y="50" width="30" height="60" fill="url(#rocketGradient2)" rx="5"/>
+            
+            <!-- Nose Cone -->
+            <path d="M 35 50 L 50 20 L 65 50 Z" fill="#ef5350"/>
+            
+            <!-- Window -->
+            <circle cx="50" cy="70" r="8" fill="url(#windowGradient2)" stroke="#01579b" stroke-width="2"/>
+            
+            <!-- Left Fin -->
+            <path d="M 35 100 L 20 120 L 35 110 Z" fill="#ff7043"/>
+            
+            <!-- Right Fin -->
+            <path d="M 65 100 L 80 120 L 65 110 Z" fill="#ff7043"/>
+            
+            <!-- Flame -->
+            <g class="flame-group">
+                <ellipse cx="50" cy="115" rx="8" ry="15" fill="#ffeb3b" opacity="0.9"/>
+                <ellipse cx="50" cy="120" rx="6" ry="12" fill="#ff9800" opacity="0.8"/>
+                <ellipse cx="50" cy="125" rx="4" ry="8" fill="#ff5722" opacity="0.7"/>
+            </g>
+        </svg>
+    </div>
+
     <!-- Animated Background -->
-    <div class="animated-bg">
+    <div class="animated-bg"></div>
         <!-- Realistic Clouds -->
         <div class="cloud cloud-1">
             <div class="cloud-part"></div>
@@ -50,7 +130,7 @@
             <div class="logo-container">
                 <div class="logo">
                     <i class="fas fa-globe-americas"></i>
-                    <span>Oasis Traveller DMC</span>
+                    <span class="logo-text">Oasis Traveller DMC</span>
                 </div>
                 <p class="tagline">Your B2B Travel Partner</p>
             </div>
@@ -128,7 +208,7 @@
                 <div class="form-header">
                     <i class="fas fa-envelope-open-text"></i>
                     <h2>Get Early Access</h2>
-                    <p>Be among the first to explore our DMC solutions. Contact us to learn more about our B2B travel services!</p>
+                    <p>Be the first to know when we launch. Contact us for partnership opportunities!</p>
                 </div>
                 <form id="contactForm" class="contact-form">
                     <div class="form-row">
@@ -172,21 +252,22 @@
             </div>
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3><i class="fas fa-map-marker-alt"></i> Our Office</h3>
-                    <p>633, 029, behind Govind Plaza,<br>
-                    Gulzar Colony, Hasangarden Colony,<br>
-                    Kamta, Lucknow,<br>
-                    Uttar Pradesh 226028, India</p>
+                    <h3><i class="fas fa-map-marker-alt"></i> India Head Office</h3>
+                    <p>Off. 10C, G-floor, VTM Building 2<br>
+                    Mehra Industrial Compound<br>
+                    Andheri (E), Mumbai 400067<br>
+                    Maharashtra, India</p>
                 </div>
                 <div class="footer-section">
                     <h3><i class="fas fa-phone-alt"></i> Contact Us</h3>
                     <p><a href="tel:+919763764444"><i class="fas fa-phone"></i> +91 97637 64444</a></p>
-                       <p><a href="tel:+919763764444"><i class="fas fa-phone"></i> +91 77448 06962</a></p>
+                    <p><a href="tel:+919763764444"><i class="fas fa-phone"></i> +91 77448 06962c</a></p>
                     <p><a href="mailto:b2b@oasistraveller.com"><i class="fas fa-envelope"></i> b2b@oasistraveller.com</a></p>
                 </div>
                 <div class="footer-section">
-                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
-                    <p>Monday - Saturday<br>9:00 AM - 6:00 PM IST</p>
+                    <h3><i class="fas fa-building"></i> Our Branches</h3>
+                    <p><i class="fas fa-map-pin"></i> Dubai | Thailand<br>
+                    <i class="fas fa-map-pin"></i> Mumbai (HO) | Lucknow</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -204,4 +285,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
