@@ -1,10 +1,13 @@
 // Countdown Timer
 function startCountdown() {
-    const launchDate = new Date('2025-01-01T00:00:00').getTime();
+    // Set launch date to 20 days from now
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 20);
+    const targetTime = launchDate.getTime();
     
     const timer = setInterval(function() {
         const now = new Date().getTime();
-        const distance = launchDate - now;
+        const distance = targetTime - now;
         
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -160,6 +163,29 @@ document.querySelectorAll('.form-group input, .form-group textarea').forEach(inp
     input.addEventListener('blur', function() {
         this.parentElement.style.transform = 'scale(1)';
     });
+});
+
+// Rocket scroll animation
+let rocketLaunched = false;
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrollY;
+    const rockets = document.querySelectorAll('.rocket-container');
+    
+    // Launch rockets when user scrolls down 200px
+    if (scrollPosition > 200 && !rocketLaunched) {
+        rocketLaunched = true;
+        rockets.forEach(rocket => {
+            rocket.classList.add('fly');
+        });
+        
+        // Reset rockets after animation
+        setTimeout(() => {
+            rocketLaunched = false;
+            rockets.forEach(rocket => {
+                rocket.classList.remove('fly');
+            });
+        }, 3000);
+    }
 });
 
 // Initialize on page load
