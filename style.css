@@ -12,6 +12,13 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 @keyframes gradientMove {
@@ -20,6 +27,80 @@ body {
     }
     50% {
         background-position: 100% 50%;
+    }
+}
+
+/* Professional SVG Rockets */
+.rocket-container {
+    position: fixed;
+    z-index: 10;
+    width: 60px;
+    height: 90px;
+    transition: all 1.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: rocketFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+}
+
+.rocket-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.rocket-left {
+    left: 10px;
+    bottom: 80px;
+}
+
+.rocket-right {
+    right: 10px;
+    bottom: 80px;
+}
+
+/* Flame animation */
+.flame-group {
+    animation: flameFlicker 0.2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes flameFlicker {
+    0%, 100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scaleY(1.3);
+        opacity: 0.8;
+    }
+}
+
+/* Floating animation */
+@keyframes rocketFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Flying animation on scroll */
+.rocket-container.fly {
+    bottom: 120vh !important;
+    opacity: 0;
+    transform: scale(1.5);
+}
+
+.rocket-container.fly .flame-group {
+    animation: flameBurst 0.1s ease-in-out infinite;
+}
+
+@keyframes flameBurst {
+    0%, 100% {
+        transform: scaleY(2);
+    }
+    50% {
+        transform: scaleY(2.5);
     }
 }
 
@@ -156,6 +237,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -183,6 +267,84 @@ body {
 .logo i {
     font-size: 3rem;
     color: #00d4ff;
+    animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1) rotateY(0deg);
+        filter: drop-shadow(0 0 10px #00d4ff);
+    }
+    50% {
+        transform: scale(1.1) rotateY(180deg);
+        filter: drop-shadow(0 0 20px #00d4ff);
+    }
+}
+
+/* Professional Logo Text - Pure White Glassy Look */
+.logo-text {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0.9) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Glassy shine effect */
+.logo-text::before {
+    content: '';
+    position: absolute;
+    left: -20%;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.9) 50%,
+        transparent 100%
+    );
+    animation: glassShine 4s ease-in-out infinite;
+    transform: skewX(-20deg);
+    filter: blur(2px);
+}
+
+@keyframes glassShine {
+    0% {
+        left: -30%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        left: 130%;
+        opacity: 0;
+    }
+    100% {
+        left: 130%;
+        opacity: 0;
+    }
+}
+
+.logo-container {
+    position: relative;
+    padding: 20px;
 }
 
 .tagline {
@@ -906,3 +1068,4 @@ body {
     mix-blend-mode: screen;
     transition: all 0.1s ease;
 }
+
